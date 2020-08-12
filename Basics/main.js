@@ -35,3 +35,23 @@ var app4 = new Vue({
         }
     }
 });
+
+/* 
+    Component
+*/
+
+Vue.component('todo-item', {
+    props: ['todo'],
+    template: '<li>{{ todo.text }}</li>'
+});
+
+var app5 = new Vue({
+    el: '#app-5',
+    data: {
+      groceryList: [
+        { id: 0, text: 'Vegetables' },
+        { id: 1, text: 'Cheese' },
+        { id: 2, text: 'Whatever else humans are supposed to eat' }
+      ]
+    }
+  })
